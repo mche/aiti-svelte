@@ -1,10 +1,10 @@
 import App from './App.svelte'
 import Head from './Head.svelte';
-import './main.scss';
+///import './main.scss';
 
 let props = {
   "head": {
-    "title": 'Михаил ★ mche.us.to',
+    "title": 'АйТи тест на Svelte ★ mche.us.to',
   },
 };
 

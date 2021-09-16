@@ -20,6 +20,9 @@
 	],
 	"dependencies": {
 		"axios": "^0.21.4",
+		"lodash.orderby": "^4.6.0",
+		"materialize-css": "^1.0.0",
+		"svelte-spa-router": "^3.2.0",
 		"yaml": "2.0.0-8"
 	}
 }

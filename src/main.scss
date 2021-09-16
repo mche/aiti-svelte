@@ -1,78 +1,140 @@
-html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
-
-	&:placeholder {
-		color: red;
-		tab-size:4;
-	}
+//@import "materialize-css/sass/components/_color-variables.scss";
+//@import "materialize-css/sass/components/_variables.scss";
+// переменные материализ
+$primary-color: rgb(71, 71, 142);
+$h1-fontsize: 3rem;
+$h2-fontsize: 2rem;
+$h3-fontsize: 1.5rem;
+$h3-fontsize: 1rem;
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
 }
+$input-focus-color: $primary-color;
+$button-raised-background: $primary-color;
+$button-raised-background-hover: lighten($primary-color, 10%);
+@import "materialize-css/sass/materialize.scss";
 
-body {
-	color: #333;
-	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+nav {
+  .brand-logo {
+    top: 0.3rem;
+  }
+  
+  ul li.active {
+      background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  img {
+    width: 4rem;
+    vertical-align: middle;
+    ///transform: rotateY(90deg);
+  }
+  
+  .btn-large {
+    line-height: normal;
+  }
+
 }
+  
+  .material-icons {
+    vertical-align: middle;
+  }
+  
+  .card-content {
+    background: lighten($primary-color, 49%);
+  }
+  // карточка пароля
+  .card.card-content {
+    background: lighten($primary-color, 40%);
+  }
+  
+  select, input {
+    & + label {
+      color: $primary-color;
+    }
+  }
+  
+  select {
+    display: block;
+    border: none;
+    outline: none;
+    
+    background-color: rgba(255, 255, 255, 0);
+    overflow: auto;
+    position: relative;
+    z-index: 1;
+  
+    &:not(.datepicker-select) {
+      border-bottom: 1px solid $input-border-color;
+    }
+  
+    &.valid {
+      border-bottom: 1px solid $input-success-color;
+      box-shadow: 0 1px 0 0 $input-success-color;
+    }
+    &:focus {
+      outline: none;
+    }
+  
+    & + label {
+      z-index: 0;
+    }
+  
+   option {
+     font-size: large;
+   }
+  }
+  .select-dropdown.dropdown-trigger {
+    display: none !important;
+  
+  }
+  
+  [type="checkbox"] {
+    &, &:checked {
+      & + span:before {
+        border-right-color: $primary-color !important;
+        border-bottom-color: $primary-color !important;
+        //left: 7px;
+      }
+    }
+    &:checked + span {
+      color: $primary-color !important;
+    }
+  }  
+  
+  
+  main {
+      padding: 1em;
+      /*margin: 0 auto;*/
+  }
+  
+  
+  .font-effect-3d-float {
+      text-shadow: 0 0.15em 0.11em rgba(0, 0, 0, 0.15), 0 0.25em 0.021em rgba(0, 0, 0, 0.1), 0 0.32em 0.32em rgba(0, 0, 0, 0.1);
+  }
 
-a {
-	color: rgb(0,100,200);
-	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
-
-	&:visited {
-		color: rgb(0,80,160);
-	}
-}
-
-
-
-label {
-	display: block;
-}
-
-input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
-}
-
-input:disabled {
-	color: #ccc;
-}
-
-input[type="range"] {
-	height: 0;
-}
-
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
-}
-
-button:disabled {
-	color: #999;
-}
-
-button:not(:disabled):active {
-	background-color: #ddd;
-}
-
-button:focus {
-	border-color: #666;
-}
-
-p {
-    line-height: 1.2 rem;
-    margin: 0;
-}
+  p {
+      margin: 0;
+  }
+    
+  /*    h1 {
+        font-size: 3em;
+        font-weight: 100;
+        margin:0;
+      }
+  
+      h2 {
+        font-size: 2em;
+        font-weight: 100;
+        margin-top: 0;
+        color: $gr-color;
+      }
+    
+      h3 {
+        font-weight: 400;
+        margin-bottom: 0rem;
+        margin-top: 3rem;
+      }*/
+      
+  
+      
+  
